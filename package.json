@@ -1,4 +1,4 @@
-{ 
+{
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Natalyapdm/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Natalyapdm/frontend-project-44/actions)",
@@ -19,5 +19,13 @@
   "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.44.0"
   }
 }
