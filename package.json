@@ -18,7 +18,9 @@
   "homepage": "https://github.com/Natalyapdm/frontend-project-44#readme",
   "type": "module",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js"
   },
   "dependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
