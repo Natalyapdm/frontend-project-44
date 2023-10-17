@@ -31,7 +31,7 @@ const brainCalc = () => {
     }
   }
   if (rightAnsw === 3) {
-    console.log(`Congratulations, ${name}`);
+    console.log(`Congratulations, ${name}!`);
   }
 };
 
