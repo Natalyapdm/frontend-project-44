@@ -1,4 +1,4 @@
-const getRandomNum = (max = 100) => {
+const getRandomNum = (max = 20) => {
   return Math.round(Math.random() * max);
 };
 
