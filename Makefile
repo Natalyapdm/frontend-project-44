@@ -13,7 +13,7 @@ brain-even:
 brain-calc:
 	node bin/brain-calc.js
 
-brain-prog:
+brain-progression:
 	node bin/brain-progression.js
 
 brain-prime: 
