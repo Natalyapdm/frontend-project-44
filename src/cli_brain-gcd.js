@@ -12,21 +12,12 @@ const brainGcd = () => {
     console.log(`Question: ${num1} ${num2}`);
     const answer = readlineSync.question("Your answer:\n");
 
-    const getGcd = (a, b) => {
-      let c;
-      if (a > b) {
-        while (b !== 0) {
-          c = b;
-          b = a % b;
-          a = c;
-        }
+    const getGcd = (firstValue, secondValue) => {
+      if (!secondValue) {
+        return firstValue;
       }
-      if (a < b) {
-        return getGcd(b, a);
-      }
-      return c;
+      return getGcd(secondValue, firstValue % secondValue);
     };
-    const res = getGcd(num1, num2);
 
     if (Number(answer) === getGcd(num1, num2)) {
       rightAnsw += 1;
