@@ -27,8 +27,6 @@ const brainGcd = () => {
       return c;
     };
     const res = getGcd(num1, num2);
-    // console.log(getGcd(num1, num2));
-    // console.log(res);
 
     if (Number(answer) === getGcd(num1, num2)) {
       rightAnsw += 1;
