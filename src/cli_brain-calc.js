@@ -45,10 +45,10 @@ const brainCalc = () => {
     const answer = readlineSync.question('Your answer:\n');
     if (Number(answer) === Number(correctAnswer)) {
       rightAnsw += 1;
-      console.log("Correct!");
+      console.log('Correct!');
     } else {
       console.log(
-        `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`
+        `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`,
       );
       break;
     }
