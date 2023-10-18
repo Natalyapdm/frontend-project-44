@@ -1,6 +1,5 @@
 import readlineSync from "readline-sync";
 import greetingGame from "./cli.js";
-import getRandomNum from "./utils/getRandomNum.js";
 
 const getRndInteger = (min, max) => {
   const result = Math.floor(Math.random() * (max - min + 1)) + min;
