@@ -1,6 +1,6 @@
-import readlineSync from "readline-sync";
-import greetingGame from "./cli.js";
-import getRandomNum from "./utils/getRandomNum.js";
+import readlineSync from 'readline-sync';
+import greetingGame from './cli.js';
+import getRandomNum from './utils/getRandomNum.js';
 
 const isPrime = (number) => {
   for (let i = 2; i <= Math.sqrt(number); i += 1) {
@@ -18,15 +18,15 @@ const brainPrime = () => {
   while (rightAnsw < 3) {
     const num = getRandomNum();
     console.log(`Question: ${num}`);
-    const answer = readlineSync.question("Your answer:\n");
-    const correctAnswer = isPrime(num) ? "yes" : "no";
+    const answer = readlineSync.question('Your answer:\n');
+    const correctAnswer = isPrime(num) ? 'yes' : 'no';
 
     if (answer === correctAnswer) {
       rightAnsw += 1;
-      console.log("Correct!");
+      console.log('Correct!');
     } else {
       console.log(
-        `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`
+        `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`,
       );
       break;
     }

@@ -1,5 +1,5 @@
-import readlineSync from "readline-sync";
-import greetingGame from "./cli.js";
+import readlineSync from 'readline-sync';
+import greetingGame from './cli.js';
 
 const getRndInteger = (min, max) => {
   const result = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -8,7 +8,7 @@ const getRndInteger = (min, max) => {
 
 const brainProg = () => {
   const name = greetingGame();
-  console.log("What number is missing in the progression?");
+  console.log('What number is missing in the progression?');
   let rightAnsw = 0;
   while (rightAnsw < 3) {
     const getProgression = (start, step, length) => {
@@ -26,17 +26,17 @@ const brainProg = () => {
     const progression = getProgression(start, step, length);
     const hiddenNumber = getRndInteger(0, progression.length - 1);
     const correctAnswer = progression[hiddenNumber].toString();
-    progression[hiddenNumber] = "..";
-    const res = progression.join(" ");
+    progression[hiddenNumber] = '..';
+    const res = progression.join(' ');
 
     console.log(`Question: ${res}`);
-    const answer = readlineSync.question("Your answer:\n");
+    const answer = readlineSync.question('Your answer:\n');
     if (answer === correctAnswer) {
       rightAnsw += 1;
-      console.log("Correct!");
+      console.log('Correct!');
     } else {
       console.log(
-        `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`
+        `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`,
       );
       break;
     }

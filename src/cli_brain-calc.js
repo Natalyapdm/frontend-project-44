@@ -1,25 +1,48 @@
-import readlineSync from "readline-sync";
-import greetingGame from "../src/cli.js";
-import getRandomNum from "../src/utils/getRandomNum.js";
+import readlineSync from 'readline-sync';
+import greetingGame from './cli.js';
+import getRandomNum from './utils/getRandomNum.js';
 
-const symbol = ["+", "-", "*"];
-const randomExpr = () => {
-  const num1 = getRandomNum();
-  const num2 = getRandomNum();
-  const randomSymbol = symbol[getRandomNum(symbol.length - 1)];
-  return `${num1} ${randomSymbol} ${num2}`;
+// const symbol = ['+', '-', '*'];
+// const randomExpr = () => {
+//   const num1 = getRandomNum();
+//   const num2 = getRandomNum();
+//   const randomSymbol = symbol[getRandomNum(symbol.length - 1)];
+//   return `${num1} ${randomSymbol} ${num2}`;
+// };
+
+const calculateAnswer = (firstValue, secondValue, operator) => {
+  let result = null;
+
+  switch (operator) {
+    case '+':
+      result = firstValue + secondValue;
+      break;
+    case '-':
+      result = firstValue - secondValue;
+      break;
+    case '*':
+      result = firstValue * secondValue;
+      break;
+    default:
+  }
+
+  return result;
 };
 
 const brainCalc = () => {
   const name = greetingGame();
-  console.log("What is the result of the expression?");
+  console.log('What is the result of the expression?');
 
   let rightAnsw = 0;
   while (rightAnsw < 3) {
-    const expr = randomExpr();
-    const correctAnswer = eval(expr);
+    const symbol = ['+', '-', '*'];
+    const num1 = getRandomNum();
+    const num2 = getRandomNum();
+    const randomSymbol = symbol[getRandomNum(symbol.length - 1)];
+    const correctAnswer = calculateAnswer(num1, num2, randomSymbol);
+    const expr = `${num1} ${randomSymbol} ${num2}`;
     console.log(`Question: ${expr}`);
-    const answer = readlineSync.question("Your answer:\n");
+    const answer = readlineSync.question('Your answer:\n');
     if (Number(answer) === Number(correctAnswer)) {
       rightAnsw += 1;
       console.log("Correct!");
