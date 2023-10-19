@@ -44,6 +44,7 @@ const brainProg = () => {
       return console.log(`Congratulations, ${name}!`);
     }
   }
+  return;
 };
 
 export default brainProg;
