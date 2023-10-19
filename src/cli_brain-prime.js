@@ -30,11 +30,10 @@ const brainPrime = () => {
       );
       break;
     }
+  }
     if (rightAnsw === 3) {
       return console.log(`Congratulations, ${name}!`);
     }
-  }
-  return;
 };
 
 export default brainPrime;

@@ -3,7 +3,7 @@
 import readlineSync from 'readline-sync';
 import greetingGame from './cli.js';
 
-const checkEvenNum = (num) => num % 2 === 0 ? 'yes' : 'no';
+const checkEvenNum = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
 const getRandomNum = () => Math.round(Math.random() * 100);
 

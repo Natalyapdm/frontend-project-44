@@ -35,7 +35,6 @@ const brainGcd = () => {
   if (rightAnsw === 3) {
     return console.log(`Congratulations, ${name}!`);
   }
-  return;
 };
 
 export default brainGcd;
