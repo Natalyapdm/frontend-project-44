@@ -2,14 +2,6 @@ import readlineSync from 'readline-sync';
 import greetingGame from './cli.js';
 import getRandomNum from './utils/getRandomNum.js';
 
-// const symbol = ['+', '-', '*'];
-// const randomExpr = () => {
-//   const num1 = getRandomNum();
-//   const num2 = getRandomNum();
-//   const randomSymbol = symbol[getRandomNum(symbol.length - 1)];
-//   return `${num1} ${randomSymbol} ${num2}`;
-// };
-
 const calculateAnswer = (firstValue, secondValue, operator) => {
   let result = null;
 
