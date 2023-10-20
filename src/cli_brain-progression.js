@@ -41,8 +41,8 @@ const brainProg = () => {
       break;
     }
   }
-    if (rightAnsw === 3) {
-      return console.log(`Congratulations, ${name}!`);
+  if (rightAnsw === 3) {
+    return console.log(`Congratulations, ${name}!`);
   }
 };
 
